@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="false"
+    android:fillViewport="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.RecoverAccountFragment">
+    tools:context=".ui.RegisterFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,36 +13,34 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <ImageView
-            android:layout_width="379dp"
-            android:layout_height="179dp"
-            android:src="@drawable/chave" />
         <TextView
             android:layout_width="300dp"
             android:layout_height="106dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Esqueceu sua senha?"
+            android:text="Cadastrar"
             android:textSize="26dp" />
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Por favor informe o email"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="18dp"/>
-        <TextView
+            android:layout_height="40dp"
+            android:text="Nome"
+            android:gravity="center_vertical"
+            android:textColor="@color/black" />
+
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="ligada a conta"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="18dp"/>
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edit"
+            android:hint="Gestor Marinho"
+            android:textSize="14dp" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:text="Email"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical"
             android:textColor="@color/black" />
 
         <EditText
@@ -52,18 +50,40 @@
             android:background="@drawable/bg_edit"
             android:hint="gestor@gamil.com"
             android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:text="Senha"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:hint="******"
+            android:background="@drawable/bg_edit"/>
+
         <Button
+            android:id="@+id/appBarLayout"
             android:layout_width="236dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/black"
-            android:text="ENVIAR"
+            android:text="CADASTRAR"
             android:textSize="16dp"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:backgroundTint="@null"
             android:gravity="center"
             android:layout_gravity="center"/>
-    </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </LinearLayout>
 </ScrollView>

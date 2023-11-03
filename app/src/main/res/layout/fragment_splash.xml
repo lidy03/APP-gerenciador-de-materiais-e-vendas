@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_default"
+    tools:context=".ui.SplashFragment">
+
+    <TextView
+        android:layout_width="234dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="BEM-VINDO"
+        android:textSize="35dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity="center"
+        android:text="Nosso app vai ajudar você a"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:gravity="center"
+        android:text="organizar melhor suas vendas"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_width="392dp"
+        android:layout_height="325dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/inicial" />
+
+    <Button
+        android:id="@+id/loginButtonSplash"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/bg_edit"
+        android:gravity="center"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:backgroundTint="@null" />
+
+    <Button
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="540dp"
+        android:background="@drawable/bg_edit"
+        android:gravity="center"
+        android:text="Cadastro"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:backgroundTint="@null" />
+
+
+</FrameLayout>
