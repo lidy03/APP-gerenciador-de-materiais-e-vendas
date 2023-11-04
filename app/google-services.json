@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "948991184502",
+    "project_id": "gerenciador-nicoli",
+    "storage_bucket": "gerenciador-nicoli.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948991184502:android:2f266cac87b65a6cda9957",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ5D1-vlI4l3Ck5hV4fJEhc39Wr7vjUxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

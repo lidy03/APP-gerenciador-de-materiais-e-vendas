@@ -12,9 +12,6 @@
         <action
             android:id="@+id/action_splashFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
-        <action
-            android:id="@+id/action_splashFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment2"
@@ -24,6 +21,9 @@
         <action
             android:id="@+id/action_loginFragment2_to_recoverAccountFragment2"
             app:destination="@id/recoverAccountFragment2" />
+        <action
+            android:id="@+id/action_loginFragment2_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"

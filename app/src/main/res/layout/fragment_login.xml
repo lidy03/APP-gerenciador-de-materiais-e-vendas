@@ -17,13 +17,13 @@
             android:layout_height="106dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Login"
+            android:text="@string/text_login"
             android:textSize="26dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="Email"
+            android:text="@string/text_email"
             android:textColor="@color/black" />
 
         <EditText
@@ -31,14 +31,14 @@
             android:layout_height="46dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit"
-            android:hint="gestor@gamil.com"
+            android:hint="@string/hint_text_email"
             android:textSize="14dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="16dp"
-            android:text="Senha"
+            android:text="@string/text_password"
             android:textColor="@color/black" />
         <EditText
             android:layout_width="match_parent"
@@ -46,17 +46,27 @@
             android:layout_marginTop="8dp"
             android:hint="******"
             android:background="@drawable/bg_edit"/>
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
+            android:id="@+id/recoverpasswordbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:paddingVertical="8dp"
-            android:text="Esqueceu sua senha?"
+            android:text="@string/text_recuperar_conta"
             android:textSize="16dp"
-            android:gravity="right"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="parent"/>
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/registerbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/cadastrar_conta"
+            android:textSize="16dp" />
 
         <Button
             android:layout_width="224dp"
@@ -65,7 +75,7 @@
             android:layout_marginTop="16dp"
             android:background="@color/black"
             android:gravity="center"
-            android:text="Entrar"
+            android:text="@string/text_entrar"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18dp"
