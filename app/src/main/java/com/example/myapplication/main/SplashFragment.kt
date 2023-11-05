@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.example.myapplication.main
 
 import android.os.Bundle
 import android.os.Handler

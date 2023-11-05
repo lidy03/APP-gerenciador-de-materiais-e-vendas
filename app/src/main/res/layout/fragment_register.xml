@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.RegisterFragment">
+    tools:context=".main.RegisterFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:gravity="center"
             android:text="Cadastrar"
             android:textSize="26dp" />
-        <TextView
+        <!-- <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Nome"
@@ -28,12 +28,12 @@
             android:textColor="@color/black" />
 
         <EditText
+            android:id="@+id/editName"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit"
-            android:hint="Gestor Marinho"
-            android:textSize="14dp" />
+            android:textSize="14dp" /> -->
 
         <TextView
             android:layout_width="match_parent"
@@ -44,11 +44,13 @@
             android:textColor="@color/black" />
 
         <EditText
+            android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit"
-            android:hint="gestor@gamil.com"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_text_email"
             android:textSize="14dp" />
 
         <TextView
@@ -60,14 +62,16 @@
             android:textColor="@color/black" />
 
         <EditText
+            android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginTop="8dp"
+            android:inputType="textPassword"
             android:hint="******"
             android:background="@drawable/bg_edit"/>
 
         <Button
-            android:id="@+id/appBarLayout"
+            android:id="@+id/buttonRegister"
             android:layout_width="236dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -79,6 +83,15 @@
             app:backgroundTint="@null"
             android:gravity="center"
             android:layout_gravity="center"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:visibility="visible"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/black"
+            android:layout_gravity="center_horizontal" />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

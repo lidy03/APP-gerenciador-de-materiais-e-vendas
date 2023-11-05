@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.example.myapplication.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,9 +13,6 @@ import com.example.myapplication.R
  * create an instance of this fragment.
  */
 class HomeFragment : Fragment() {
-
-    //private var param1: String? = null - BINDING
-    //private var param2: String? = null - BINDING
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

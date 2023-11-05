@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fillViewport="false"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.RecoverAccountFragment">
+    tools:context=".main.RecoverAccountFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,13 +46,16 @@
             android:textColor="@color/black" />
 
         <EditText
+            android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit"
-            android:hint="gestor@gamil.com"
+            android:hint="@string/hint_text_email"
+            android:inputType="textEmailAddress"
             android:textSize="14dp" />
         <Button
+            android:id="@+id/send"
             android:layout_width="236dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -64,6 +67,15 @@
             app:backgroundTint="@null"
             android:gravity="center"
             android:layout_gravity="center"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:visibility="visible"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/black"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
 
 </ScrollView>
