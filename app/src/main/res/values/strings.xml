@@ -2,6 +2,8 @@
     <string name="app_name">My Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <!--Login/Cadastro-->
     <string name="text_password">Senha</string>
     <string name="text_recuperar_conta">Esqueceu sua senha?</string>
     <string name="text_entrar">Entrar</string>
@@ -9,4 +11,23 @@
     <string name="text_email">Email</string>
     <string name="hint_text_email">email@email</string>
     <string name="cadastrar_conta">Cadastrar</string>
+
+    <!--Generics-->
+    <string name="text_welcome">Bem-vindo</string>
+    <string name="text_img_material_register">Gerenciamento de Materiais</string>
+    <string name="text_paid">Pago</string>
+    <string name="text_pendente">Pendente</string>
+
+    <!--Firebase Authentication Errors-->
+    <string name="account_not_registered_register_fragment"> Nenhuma conta encontrada com este e-mail.</string>
+    <string name="invalid_email_register_fragment"> Nenhuma conta encontrada com este e-mail.</string>
+    <string name="invalid_password_register_fragment"> Senha inválida, tente novamente.</string>
+    <string name="email_in_user_register_fragment"> Este e-mail já está em uso.</string>
+    <string name="strong_password_register_fragment"> Insira uma senha mais forte.</string>
+    <string name="error_generic">Ocorreu um erro, por favor, tente novamente mais tarde.</string>
+
+    <string name="text_description_form_sales_fragment">Produto</string>
+    <string name="text_status_form_sales_fragment">Status</string>
+    <string name="text_btn_save_task_form_sales_fragment">Salvar</string>
+
 </resources>

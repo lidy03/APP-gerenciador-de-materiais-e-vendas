@@ -1,6 +1,7 @@
 package com.example.myapplication.main
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentLoginBinding
+import com.example.myapplication.main.helper.FirebaseHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -29,13 +31,13 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = Firebase.auth
         initClicks()
     }
 
-    private fun initClicks(){
+    private fun initClicks() {
         binding.loginButton.setOnClickListener { validateData() }
 
         binding.registerbutton.setOnClickListener {
@@ -46,29 +48,30 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun validateData(){
+    private fun validateData() {
         val email = binding.editEmail.text.toString().trim()
         val password = binding.editPassword.text.toString().trim()
 
-        if(email.isNotEmpty() && password.isNotEmpty()) {
+        if (email.isNotEmpty() && password.isNotEmpty()) {
             binding.progressBar.isVisible = true
             loginUser(email, password)
 
-        }else if(email.isEmpty()){
+        } else if (email.isEmpty()) {
             Toast.makeText(requireContext(), "Informe seu email.", Toast.LENGTH_SHORT).show()
-        }else if(password.isEmpty()){
+        } else if (password.isEmpty()) {
             Toast.makeText(requireContext(), "Informe sua senha.", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun loginUser(email:String, password:String){
+    private fun loginUser(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    findNavController().navigate(R.id.action_loginFragment2_to_homeFragment2)
+                    findNavController().navigate(R.id.action_global_homeFragment2)
                 } else {
                     //erro
-                    binding.progressBar.isVisible= false
+                    Toast.makeText(requireContext(), FirebaseHelper.validError(task.exception?.message?:""), Toast.LENGTH_SHORT).show()
+                    binding.progressBar.isVisible = false
                 }
             }
     }

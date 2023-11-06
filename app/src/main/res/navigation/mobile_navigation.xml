@@ -10,47 +10,92 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_splashFragment_to_loginFragment2"
-            app:destination="@id/loginFragment2"
+            android:id="@+id/action_splashFragment_to_authentication"
+            app:destination="@id/authentication"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/loginFragment2"
-        android:name="com.example.myapplication.main.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+    <navigation android:id="@+id/authentication"
+        app:startDestination="@id/loginFragment2">
+        <fragment
+            android:id="@+id/recoverAccountFragment2"
+            android:name="com.example.myapplication.main.RecoverAccountFragment"
+            android:label="fragment_recover_account"
+            tools:layout="@layout/fragment_recover_account" />
+        <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.example.myapplication.main.RegisterFragment"
+            android:label="fragment_register"
+            tools:layout="@layout/fragment_register" />
+        <fragment
+            android:id="@+id/loginFragment2"
+            android:name="com.example.myapplication.main.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login" >
+            <action
+                android:id="@+id/action_loginFragment2_to_registerFragment"
+                app:destination="@id/registerFragment" />
+            <action
+                android:id="@+id/action_loginFragment2_to_recoverAccountFragment2"
+                app:destination="@id/recoverAccountFragment2" />
+        </fragment>
         <action
-            android:id="@+id/action_loginFragment2_to_recoverAccountFragment2"
-            app:destination="@id/recoverAccountFragment2" />
-        <action
-            android:id="@+id/action_loginFragment2_to_registerFragment"
-            app:destination="@id/registerFragment" />
-        <action
-            android:id="@+id/action_loginFragment2_to_homeFragment2"
+            android:id="@+id/action_global_homeFragment2"
             app:destination="@id/homeFragment"
             app:popUpTo="@id/loginFragment2"
             app:popUpToInclusive="true"/>
-    </fragment>
-    <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.example.myapplication.main.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_registerFragment_to_homeFragment"
-            app:destination="@id/homeFragment"
-            app:popUpTo="@id/loginFragment2"
-            app:popUpToInclusive="true"/>
-    </fragment>
-    <fragment
-        android:id="@+id/recoverAccountFragment2"
-        android:name="com.example.myapplication.main.RecoverAccountFragment"
-        android:label="fragment_recover_account"
-        tools:layout="@layout/fragment_recover_account" />
+            android:id="@+id/action_global_salesFragment"
+            app:destination="@id/salesFragment" />
+    </navigation>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.myapplication.main.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_manageMaterialFragment2"
+            app:destination="@id/manageMaterialFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_authentication"
+            app:destination="@id/authentication"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_homeFragment_to_salesFragment"
+            app:destination="@id/salesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_formSalesFragment2"
+            app:destination="@id/formSalesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageMaterialFragment"
+        android:name="com.example.myapplication.main.ManageMaterialFragment"
+        android:label="fragment_manage_material"
+        tools:layout="@layout/fragment_manage_material" />
+    <fragment
+        android:id="@+id/salesFragment"
+        android:name="com.example.myapplication.main.SalesFragment"
+        android:label="fragment_sales"
+        tools:layout="@layout/fragment_sales" >
+        <action
+            android:id="@+id/action_salesFragment_to_formSalesFragment2"
+            app:destination="@id/formSalesFragment2" />
+        <action
+            android:id="@+id/action_salesFragment_to_authentication"
+            app:destination="@id/authentication" />
+    </fragment>
+    <fragment
+        android:id="@+id/formSalesFragment2"
+        android:name="com.example.myapplication.main.FormSalesFragment"
+        android:label="fragment_form_sales"
+        tools:layout="@layout/fragment_form_sales" >
+        <argument
+            android:name="sale"
+            app:argType="com.example.myapplication.main.model.Sales"
+            app:nullable="true" />
+    </fragment>
 </navigation>
